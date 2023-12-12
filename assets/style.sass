@@ -1,0 +1,204 @@
+/*
+    correctifs à voir avec Flo:
+        tous les liens qui renvoient vers une autre page s'ouvrent dans un nouvel onglet. c'est ok ?
+        .mainTop ul
+            proposer de rassembler le contenus de tous les liens sur une seule page avec une nav-bar
+        .publiLireTout
+            les 2 liens renvoient à la même adresse
+            pour respecter le modèle, il faudrait un font-weight 200 ou 300
+                mais il n'existe pas pour la police Headland One sur google fonts
+        dans .works
+            je pense qu'il serait mieux d'afficher la photo en entier (dans une modale) lors du clic
+            et retirer le lien sur la titre, il fait doublon avec le "Lire la suite"
+            j'ai corrigé l'affichage en hauteur pour le couple halloween
+            correctifs d'orthographe:
+                j'ai mis des majuscules au début des phrases qui n'en avaient pas
+                Merci "à" Mélodie et Steve
+                m’autoriser "à" publier
+                La spooky season étant terminé"," j’ai déjà
+                les témoignages que j’ai obtenu""s, 
+    */
+
+// header li icon-color, .mainTop background-color
+$firstColor: #A19982
+
+// .mainTop quote-color
+$secondColor: #2d2d2d
+
+// .mainTop links-color
+$thirdColor: black
+
+// body
+$firstPolice: 'Jost', sans-serif
+
+// .mainTop quote, .publiLireTout a, .works figcaption
+// sur google fonts, uniquement disponible en font-weight 400
+$secondPolice: 'Headland One', serif
+
+// header .titlesContener
+$thirdPolice: 'EB Garamond', serif, 'Roboto', sans-serif
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    border: none
+
+a
+    text-decoration: none
+    color: black
+
+body
+    width: 100%
+    max-width: 1440px
+    margin: auto
+    font-family: $firstPolice
+
+header
+    padding: clamp(24px, 10vw, 100px)
+    padding-bottom: 20px
+    .headerFlex
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        align-items: center
+        @media all and (min-width: 800px)
+            flex-wrap: nowrap
+
+        .headerRow
+            width: 100%
+            height: 1px
+            background-color: black
+
+        .titlesContener
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            max-width: 600px
+            font-family: $thirdPolice
+        h1
+            margin: 20px
+            font-size: min(15vw, 3.5em)
+            font-weight: 400
+            text-align: center
+            @media all and (min-width: 600px)
+                letter-spacing: 0.5em
+        h2
+            margin: 20px 0
+            font-size: min(12vw, 2.8em)
+            font-style: italic
+            font-weight: 400
+    ul
+        display: flex
+        justify-content: center
+        width: 100%
+        list-style-type: none
+        li
+            margin: 20px
+            i
+                color: $firstColor
+
+main
+    .mainTop
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        max-width: 1440px
+        background-color: $firstColor
+        @media all and (min-width: 800px)
+            flex-direction: row
+        figure
+            display: flex
+            @media all and (min-width: 800px)
+                width: 40vw
+                max-width: 960px
+            img
+                width: 100%
+                object-fit: contain
+    .mainTopText
+        display: flex
+        flex-direction: column
+        padding: clamp(24px, 2vw, 100px) clamp(20px, 6vw, 100px)
+        @media all and (min-width: 800px)
+            width: 60vw
+            height: auto
+        .quote
+            max-width: 665px
+            padding: 1em
+            padding-left: 2.5em
+            text-align: center
+            border-left: solid 7px black
+            font-size: 0.85em
+            font-weight: bold
+            font-family: $secondPolice
+            p:nth-of-type(2)
+                margin-top: 2em
+            a
+                color: $secondColor
+                font-weight: normal
+        ul
+            margin: min(30px, 5vw)
+            margin-top: 50px
+            li
+                font-size: 1.25em
+                line-height: 1.5em
+                font-weight: 300
+                a
+                    color: $thirdColor
+
+.publiLireTout
+    display: flex
+    justify-content: space-between
+    padding: clamp(24px, 7vw, 70px) clamp(24px, 10vw, 100px)
+    @media all and (max-width: 400px)
+        flex-direction: column
+        a
+            text-align: center
+    a
+        font-family: $secondPolice
+        font-size: 1.5em
+
+.works
+    padding: 0 clamp(24px, 10vw, 100px)
+    ul
+        list-style-type: none
+        li
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            @media all and (min-width: 800px)
+                flex-wrap: nowrap
+                .leftArticle
+                    margin-right: 10px
+                .rightArticle
+                    margin-left: 10px
+            article
+                width: clamp(100px, 100%, 640px)
+                margin-bottom: 4em
+                figure
+                    width: 100%
+                    img
+                        width: 100%
+                        height: 100%
+                        max-height: 320px
+                        object-fit: cover
+                    .coupleHalloween
+                        object-position: 0 90%
+                    figcaption
+                        margin-top: min(30px, 5vw)
+                        font-size: clamp(1.75rem, 3.5vw, 3rem)
+                        a
+                            font-family: $secondPolice
+                p
+                    margin-top: min(30px, 5vw)
+                    font-size: 1.25em
+                    font-weight: 300
+                a
+                    font-weight: 400
+    .worksBottom
+        margin-top: 12vw
+        font-size: 2em
+        font-weight: 300
+

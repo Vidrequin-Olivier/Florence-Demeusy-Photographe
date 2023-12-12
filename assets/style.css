@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/*  correctifs à voir avec Flo:
+ *      tous les liens qui renvoient vers une autre page s'ouvrent dans un nouvel onglet. c'est ok ?
+ *      .mainTop ul
+ *          proposer de rassembler le contenus de tous les liens sur une seule page avec une nav-bar
+ *      .publiLireTout
+ *          les 2 liens renvoient à la même adresse
+ *          pour respecter le modèle, il faudrait un font-weight 200 ou 300
+ *              mais il n'existe pas pour la police Headland One sur google fonts
+ *      dans .works
+ *          je pense qu'il serait mieux d'afficher la photo en entier (dans une modale) lors du clic
+ *          et retirer le lien sur la titre, il fait doublon avec le "Lire la suite"
+ *          j'ai corrigé l'affichage en hauteur pour le couple halloween
+ *          correctifs d'orthographe:
+ *              j'ai mis des majuscules au début des phrases qui n'en avaient pas
+ *              Merci "à" Mélodie et Steve
+ *              m’autoriser "à" publier
+ *              La spooky season étant terminé"," j’ai déjà
+ *              les témoignages que j’ai obtenu""s, 
+ *  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  font-family: "Jost", sans-serif;
+}
+
+header {
+  padding: clamp(24px, 10vw, 100px);
+  padding-bottom: 20px;
+}
+header .headerFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media all and (min-width: 800px) {
+  header .headerFlex {
+    flex-wrap: nowrap;
+  }
+}
+header .headerFlex .headerRow {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+header .headerFlex .titlesContener {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  font-family: "EB Garamond", serif, "Roboto", sans-serif;
+}
+header .headerFlex h1 {
+  margin: 20px;
+  font-size: min(15vw, 3.5em);
+  font-weight: 400;
+  text-align: center;
+}
+@media all and (min-width: 600px) {
+  header .headerFlex h1 {
+    letter-spacing: 0.5em;
+  }
+}
+header .headerFlex h2 {
+  margin: 20px 0;
+  font-size: min(12vw, 2.8em);
+  font-style: italic;
+  font-weight: 400;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  list-style-type: none;
+}
+header ul li {
+  margin: 20px;
+}
+header ul li i {
+  color: #A19982;
+}
+
+main .mainTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #A19982;
+}
+@media all and (min-width: 800px) {
+  main .mainTop {
+    flex-direction: row;
+  }
+}
+main .mainTop figure {
+  display: flex;
+}
+@media all and (min-width: 800px) {
+  main .mainTop figure {
+    width: 40vw;
+    max-width: 960px;
+  }
+}
+main .mainTop figure img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .mainTopText {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 2vw, 100px) clamp(20px, 6vw, 100px);
+}
+@media all and (min-width: 800px) {
+  main .mainTopText {
+    width: 60vw;
+    height: auto;
+  }
+}
+main .mainTopText .quote {
+  max-width: 665px;
+  padding: 1em;
+  padding-left: 2.5em;
+  text-align: center;
+  border-left: solid 7px black;
+  font-size: 0.85em;
+  font-weight: bold;
+  font-family: "Headland One", serif;
+}
+main .mainTopText .quote p:nth-of-type(2) {
+  margin-top: 2em;
+}
+main .mainTopText .quote a {
+  color: #2d2d2d;
+  font-weight: normal;
+}
+main .mainTopText ul {
+  margin: min(30px, 5vw);
+  margin-top: 50px;
+}
+main .mainTopText ul li {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+main .mainTopText ul li a {
+  color: black;
+}
+
+.publiLireTout {
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(24px, 7vw, 70px) clamp(24px, 10vw, 100px);
+}
+@media all and (max-width: 400px) {
+  .publiLireTout {
+    flex-direction: column;
+  }
+  .publiLireTout a {
+    text-align: center;
+  }
+}
+.publiLireTout a {
+  font-family: "Headland One", serif;
+  font-size: 1.5em;
+}
+
+.works {
+  padding: 0 clamp(24px, 10vw, 100px);
+}
+.works ul {
+  list-style-type: none;
+}
+.works ul li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media all and (min-width: 800px) {
+  .works ul li {
+    flex-wrap: nowrap;
+  }
+  .works ul li .leftArticle {
+    margin-right: 10px;
+  }
+  .works ul li .rightArticle {
+    margin-left: 10px;
+  }
+}
+.works ul li article {
+  width: clamp(100px, 100%, 640px);
+  margin-bottom: 4em;
+}
+.works ul li article figure {
+  width: 100%;
+}
+.works ul li article figure img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.works ul li article figure .coupleHalloween {
+  -o-object-position: 0 90%;
+     object-position: 0 90%;
+}
+.works ul li article figure figcaption {
+  margin-top: min(30px, 5vw);
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+}
+.works ul li article figure figcaption a {
+  font-family: "Headland One", serif;
+}
+.works ul li article p {
+  margin-top: min(30px, 5vw);
+  font-size: 1.25em;
+  font-weight: 300;
+}
+.works ul li article a {
+  font-weight: 400;
+}
+.works .worksBottom {
+  margin-top: 12vw;
+  font-size: 2em;
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */
