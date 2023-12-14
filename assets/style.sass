@@ -210,7 +210,7 @@ main
 
 .presse
     margin-top: 30px
-    padding: 60px clamp(24px, 10vw, 100px)
+    padding: 60px 0
     background-color: rgb(241, 237, 230)
     h3
         font-size: 40px
@@ -219,17 +219,46 @@ main
         font-family: $fourthPolice
     .presseContener
         display: flex
-        justify-content: space-evenly
+        flex-direction: column
         align-items: center
         flex-wrap: wrap
         margin-top: clamp(24px, 10vw, 80px)
+        @media all and (min-width: 1180px)
+            flex-direction: row
+            justify-content: space-evenly
         img
             width: 100%
             max-width: 570px
-            margin: 7px
     p
         text-align: right
         margin: 50px 15vw
         font-size: clamp(18px, 8vw, 24px)
         font-weight: 300
         font-family: $fourthPolice
+
+.temoignages
+    margin-top: 30px
+    h3
+        margin-left: clamp(24px, 10vw, 100px)
+        font-size: clamp(30px, 8vw, 40px)
+        font-weight: 300
+        font-family: $fourthPolice
+    .blocTemoignages
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-evenly
+        width: 100%
+        img
+            width: 100%
+            margin: clamp(20px, 10vw, 30px) 5px 0
+            object-fit: cover
+        .blocTemoignagesLeft, .blocTemoignagesRight
+            width: 100%
+            max-width: 605px
+        .blocTemoignagesRight
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-evenly
+            @media all and (min-width: 800px)
+                img
+                    max-width: 290px
