@@ -1,12 +1,11 @@
 /*
     correctifs à voir avec Flo:
         tous les liens qui renvoient vers une autre page s'ouvrent dans un nouvel onglet. c'est ok ?
+        il faudrait choisir une autre molice d'écriture pour $secondPolice
         .mainTop ul
             proposer de rassembler le contenus de tous les liens sur une seule page avec une nav-bar
         .publiLireTout
             les 2 liens renvoient à la même adresse
-            pour respecter le modèle, il faudrait un font-weight 200 ou 300
-                mais il n'existe pas pour la police Headland One sur google fonts
         dans .works
             je pense qu'il serait mieux d'afficher la photo en entier (dans une modale) lors du clic
             et retirer le lien sur la titre, il fait doublon avec le "Lire la suite"
@@ -31,7 +30,7 @@ $thirdColor: black
 // body
 $firstPolice: 'Jost', sans-serif
 
-// .mainTop quote, .publiLireTout a, .works figcaption
+// .mainTop quote, .publiLireTout a, .works figcaption, footer p a
 // sur google fonts, uniquement disponible en font-weight 400
 $secondPolice: 'Headland One', serif
 
@@ -262,3 +261,28 @@ main
             @media all and (min-width: 800px)
                 img
                     max-width: 290px
+
+footer
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: clamp(50px, 20vw, 200px) 20px 65px
+    text-align: center
+    font-size: clamp(0.8em, 10vw, 1.5em)
+    p
+        a
+            font-family: $secondPolice
+            font-weight: 700
+    ul
+        display: flex
+        justify-content: center
+        list-style-type: none
+        li
+            margin: 20px
+            i
+                color: $firstColor
+    .contact
+        margin-top: 80px
+        a
+            color: blue
+            text-decoration: underline
