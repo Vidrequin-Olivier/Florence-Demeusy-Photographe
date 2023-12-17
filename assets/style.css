@@ -1,24 +1,3 @@
-@charset "UTF-8";
-/*  correctifs à voir avec Flo:
- *      remplacer l'image dans head link rel="icon"
- *      tous les liens qui renvoient vers une autre page s'ouvrent dans un nouvel onglet. c'est ok ?
- *      il faudrait choisir une autre molice d'écriture pour $secondPolice
- *      .mainTop ul
- *          proposer de rassembler le contenus de tous les liens sur une seule page avec une nav-bar
- *      .publiLireTout
- *          les 2 liens renvoient à la même adresse
- *      dans .works
- *          je pense qu'il serait mieux d'afficher la photo en entier (dans une modale) lors du clic
- *          et retirer le lien sur la titre, il fait doublon avec le "Lire la suite"
- *          j'ai corrigé l'affichage en hauteur pour le couple halloween
- *          correctifs d'orthographe:
- *              j'ai mis des majuscules au début des phrases qui n'en avaient pas
- *              Merci "à" Mélodie et Steve
- *              m’autoriser "à" publier
- *              La spooky season étant terminé"," j’ai déjà
- *              les témoignages que j’ai obtenu""s, 
- *          remplacer l'image de Babylloween
- *  */
 * {
   margin: 0;
   padding: 0;

@@ -1,25 +1,3 @@
-/*
-    correctifs à voir avec Flo:
-        remplacer l'image dans head link rel="icon"
-        tous les liens qui renvoient vers une autre page s'ouvrent dans un nouvel onglet. c'est ok ?
-        il faudrait choisir une autre molice d'écriture pour $secondPolice
-        .mainTop ul
-            proposer de rassembler le contenus de tous les liens sur une seule page avec une nav-bar
-        .publiLireTout
-            les 2 liens renvoient à la même adresse
-        dans .works
-            je pense qu'il serait mieux d'afficher la photo en entier (dans une modale) lors du clic
-            et retirer le lien sur la titre, il fait doublon avec le "Lire la suite"
-            j'ai corrigé l'affichage en hauteur pour le couple halloween
-            correctifs d'orthographe:
-                j'ai mis des majuscules au début des phrases qui n'en avaient pas
-                Merci "à" Mélodie et Steve
-                m’autoriser "à" publier
-                La spooky season étant terminé"," j’ai déjà
-                les témoignages que j’ai obtenu""s, 
-            remplacer l'image de Babylloween
-    */
-
 // header li icon-color, .mainTop background-color
 $firstColor: #A19982
 
@@ -43,249 +21,249 @@ $thirdPolice: 'EB Garamond', serif
 $fourthPolice: 'Literata', serif
 
 *
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-    border: none
+   margin: 0
+   padding: 0
+   box-sizing: border-box
+   border: none
 
 a
-    text-decoration: none
-    color: black
+   text-decoration: none
+   color: black
 
 a:hover
-    text-decoration: underline
+   text-decoration: underline
 
 body
-    width: 100%
-    max-width: 1440px
-    margin: auto
-    font-family: $firstPolice
+   width: 100%
+   max-width: 1440px
+   margin: auto
+   font-family: $firstPolice
 
 header
-    padding: clamp(24px, 10vw, 100px)
-    padding-bottom: 20px
-    .headerFlex
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
-        align-items: center
-        @media all and (min-width: 800px)
-            flex-wrap: nowrap
+   padding: clamp(24px, 10vw, 100px)
+   padding-bottom: 20px
+   .headerFlex
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      align-items: center
+      @media all and (min-width: 800px)
+         flex-wrap: nowrap
 
-        .headerRow
-            width: 100%
-            height: 1px
-            background-color: black
+      .headerRow
+         width: 100%
+         height: 1px
+         background-color: black
 
-        .titlesContener
-            display: flex
-            flex-direction: column
-            align-items: center
-            width: 100%
-            max-width: 600px
-            font-family: $thirdPolice
-        h1
-            margin: 20px
-            font-size: min(15vw, 3.5em)
-            font-weight: 400
-            text-align: center
-            @media all and (min-width: 600px)
-                letter-spacing: 0.5em
-        h2
-            margin: 20px 0
-            font-size: min(12vw, 2.8em)
-            font-style: italic
-            font-weight: 400
-    ul
-        display: flex
-        justify-content: center
-        width: 100%
-        list-style-type: none
-        li
-            margin: 20px
-            i
-                color: $firstColor
+      .titlesContener
+         display: flex
+         flex-direction: column
+         align-items: center
+         width: 100%
+         max-width: 600px
+         font-family: $thirdPolice
+      h1
+         margin: 20px
+         font-size: min(15vw, 3.5em)
+         font-weight: 400
+         text-align: center
+         @media all and (min-width: 600px)
+            letter-spacing: 0.5em
+      h2
+         margin: 20px 0
+         font-size: min(12vw, 2.8em)
+         font-style: italic
+         font-weight: 400
+   ul
+      display: flex
+      justify-content: center
+      width: 100%
+      list-style-type: none
+      li
+         margin: 20px
+         i
+            color: $firstColor
 
 main
-    .mainTop
-        display: flex
-        flex-direction: column
-        align-items: center
-        width: 100%
-        max-width: 1440px
-        background-color: $firstColor
-        @media all and (min-width: 800px)
-            flex-direction: row
-        figure
-            display: flex
-            @media all and (min-width: 800px)
-                width: 40vw
-                max-width: 960px
-            img
-                width: 100%
-                object-fit: contain
-    .mainTopText
-        display: flex
-        flex-direction: column
-        padding: clamp(24px, 2vw, 100px) clamp(20px, 6vw, 100px)
-        @media all and (min-width: 800px)
-            width: 60vw
-            height: auto
-        .quote
-            max-width: 665px
-            padding: 1em
-            padding-left: 2.5em
-            text-align: center
-            border-left: solid 7px black
-            font-size: 0.85em
-            font-weight: bold
-            font-family: $secondPolice
-            p:nth-of-type(2)
-                margin-top: 2em
+   .mainTop
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 100%
+      max-width: 1440px
+      background-color: $firstColor
+      @media all and (min-width: 800px)
+         flex-direction: row
+      figure
+         display: flex
+         @media all and (min-width: 800px)
+            width: 40vw
+            max-width: 960px
+         img
+            width: 100%
+            object-fit: contain
+   .mainTopText
+      display: flex
+      flex-direction: column
+      padding: clamp(24px, 2vw, 100px) clamp(20px, 6vw, 100px)
+      @media all and (min-width: 800px)
+         width: 60vw
+         height: auto
+      .quote
+         max-width: 665px
+         padding: 1em
+         padding-left: 2.5em
+         text-align: center
+         border-left: solid 7px black
+         font-size: 0.85em
+         font-weight: bold
+         font-family: $secondPolice
+         p:nth-of-type(2)
+            margin-top: 2em
+         a
+            color: $secondColor
+            font-weight: normal
+      ul
+         margin: min(30px, 5vw)
+         margin-top: 50px
+         li
+            font-size: 1.25em
+            line-height: 1.5em
+            font-weight: 300
             a
-                color: $secondColor
-                font-weight: normal
-        ul
-            margin: min(30px, 5vw)
-            margin-top: 50px
-            li
-                font-size: 1.25em
-                line-height: 1.5em
-                font-weight: 300
-                a
-                    color: $thirdColor
+               color: $thirdColor
 
 .publiLireTout
-    display: flex
-    justify-content: space-between
-    padding: clamp(24px, 7vw, 70px) clamp(24px, 10vw, 100px)
-    @media all and (max-width: 400px)
-        flex-direction: column
-        a
-            text-align: center
-    a
-        font-family: $secondPolice
-        font-size: 1.5em
+   display: flex
+   justify-content: space-between
+   padding: clamp(24px, 7vw, 70px) clamp(24px, 10vw, 100px)
+   @media all and (max-width: 400px)
+      flex-direction: column
+      a
+         text-align: center
+   a
+      font-family: $secondPolice
+      font-size: 1.5em
 
 .works
-    padding: 0 clamp(24px, 10vw, 100px)
-    ul
-        list-style-type: none
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
-        @media all and (min-width: 800px)
-            .leftArticle
-                margin-right: 10px
-            .rightArticle
-                margin-left: 10px
-        li
-            width: clamp(100px, 100%, 610px)
-            @media all and (min-width: 800px)
-                width: clamp(310px, 50%, 610px)
-            article
-                margin-bottom: 4em
-                figure
-                    width: 100%
-                    img
-                        width: 100%
-                        height: 100%
-                        max-height: 320px
-                        object-fit: cover
-                    .coupleHalloween
-                        object-position: 0 90%
-                    figcaption
-                        margin-top: min(30px, 5vw)
-                        font-size: clamp(1.75rem, 3.5vw, 3rem)
-                        a
-                            font-family: $secondPolice
-                p
-                    margin-top: min(30px, 5vw)
-                    font-size: 1.25em
-                    font-weight: 300
-                a
-                    font-weight: 400
-    .worksBottom
-        margin-top: 12vw
-        font-size: 2em
-        font-weight: 300
+   padding: 0 clamp(24px, 10vw, 100px)
+   ul
+      list-style-type: none
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      @media all and (min-width: 800px)
+         .leftArticle
+            margin-right: 10px
+         .rightArticle
+            margin-left: 10px
+      li
+         width: clamp(100px, 100%, 610px)
+         @media all and (min-width: 800px)
+            width: clamp(310px, 50%, 610px)
+         article
+            margin-bottom: 4em
+            figure
+               width: 100%
+               img
+                  width: 100%
+                  height: 100%
+                  max-height: 320px
+                  object-fit: cover
+               .coupleHalloween
+                  object-position: 0 90%
+               figcaption
+                  margin-top: min(30px, 5vw)
+                  font-size: clamp(1.75rem, 3.5vw, 3rem)
+                  a
+                     font-family: $secondPolice
+            p
+               margin-top: min(30px, 5vw)
+               font-size: 1.25em
+               font-weight: 300
+            a
+               font-weight: 400
+   .worksBottom
+      margin-top: 12vw
+      font-size: 2em
+      font-weight: 300
 
 .presse
-    margin-top: 30px
-    padding: 60px 0
-    background-color: rgb(241, 237, 230)
-    h3
-        font-size: 40px
-        font-weight: 300
-        text-align: center
-        font-family: $fourthPolice
-    .presseContener
-        display: flex
-        flex-direction: column
-        align-items: center
-        flex-wrap: wrap
-        margin-top: clamp(24px, 10vw, 80px)
-        @media all and (min-width: 1180px)
-            flex-direction: row
-            justify-content: space-evenly
-        img
-            width: 100%
-            max-width: 570px
-    p
-        text-align: right
-        margin: 50px 15vw
-        font-size: clamp(18px, 8vw, 24px)
-        font-weight: 300
-        font-family: $fourthPolice
+   margin-top: 30px
+   padding: 60px 0
+   background-color: rgb(241, 237, 230)
+   h3
+      font-size: 40px
+      font-weight: 300
+      text-align: center
+      font-family: $fourthPolice
+   .presseContener
+      display: flex
+      flex-direction: column
+      align-items: center
+      flex-wrap: wrap
+      margin-top: clamp(24px, 10vw, 80px)
+      @media all and (min-width: 1180px)
+         flex-direction: row
+         justify-content: space-evenly
+      img
+         width: 100%
+         max-width: 570px
+   p
+      text-align: right
+      margin: 50px 15vw
+      font-size: clamp(18px, 8vw, 24px)
+      font-weight: 300
+      font-family: $fourthPolice
 
 .temoignages
-    margin-top: 30px
-    h3
-        margin-left: clamp(24px, 10vw, 100px)
-        font-size: clamp(30px, 8vw, 40px)
-        font-weight: 300
-        font-family: $fourthPolice
-    .blocTemoignages
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-evenly
-        width: 100%
-        img
-            width: 100%
-            margin: clamp(20px, 10vw, 30px) 5px 0
-            object-fit: cover
-        .blocTemoignagesLeft, .blocTemoignagesRight
-            width: 100%
-            max-width: 605px
-        .blocTemoignagesRight
-            display: flex
-            flex-wrap: wrap
-            justify-content: space-evenly
-            @media all and (min-width: 800px)
-                img
-                    max-width: 290px
+   margin-top: 30px
+   h3
+      margin-left: clamp(24px, 10vw, 100px)
+      font-size: clamp(30px, 8vw, 40px)
+      font-weight: 300
+      font-family: $fourthPolice
+   .blocTemoignages
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-evenly
+      width: 100%
+      img
+         width: 100%
+         margin: clamp(20px, 10vw, 30px) 5px 0
+         object-fit: cover
+      .blocTemoignagesLeft, .blocTemoignagesRight
+         width: 100%
+         max-width: 605px
+      .blocTemoignagesRight
+         display: flex
+         flex-wrap: wrap
+         justify-content: space-evenly
+         @media all and (min-width: 800px)
+               img
+                  max-width: 290px
 
 footer
-    display: flex
-    flex-direction: column
-    align-items: center
-    margin: clamp(50px, 20vw, 200px) 20px 65px
-    text-align: center
-    font-size: clamp(0.8em, 10vw, 1.5em)
-    p
-        a
-            font-family: $secondPolice
-            font-weight: 700
-    ul
-        display: flex
-        justify-content: center
-        list-style-type: none
-        li
-            margin: 20px
-            i
-                color: $firstColor
-    .contact
-        margin-top: 80px
-        a
-            color: blue
-            text-decoration: underline
+   display: flex
+   flex-direction: column
+   align-items: center
+   margin: clamp(50px, 20vw, 200px) 20px 65px
+   text-align: center
+   font-size: clamp(0.8em, 10vw, 1.5em)
+   p
+      a
+         font-family: $secondPolice
+         font-weight: 700
+   ul
+      display: flex
+      justify-content: center
+      list-style-type: none
+      li
+         margin: 20px
+         i
+            color: $firstColor
+   .contact
+      margin-top: 80px
+      a
+         color: blue
+         text-decoration: underline
