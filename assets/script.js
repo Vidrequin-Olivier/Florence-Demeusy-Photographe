@@ -1,6 +1,7 @@
 // tous les projets:
 let witchyWeen = {
    id: "ça tu le laisse, c'est le code qui le gère",
+   nomProjet: "witchyWeen",
    img: "witchy-ween.webp",
    ajust: ``,
    alt: `Photo portrait buste d'une sorcière d'Halloween qui tiens dans ses mains un crâne fumant.`,
@@ -11,6 +12,7 @@ let witchyWeen = {
 
 let coupleHalloween = {
    id: "ça tu le laisse, c'est le code qui le gère",
+   nomProjet: "coupleHalloween",
    img: "couple-halloween .webp",
    ajust: `50% 90%`,
    alt: `Photo de deux personnes en salopette et chemise à carreaux avec des têtes en forme de citrouilles d'Halloween, dans une forêt automnale.`,
@@ -21,6 +23,7 @@ let coupleHalloween = {
 
 let babylloween = {
    id: "ça tu le laisse, c'est le code qui le gère",
+   nomProjet: "babylloween",
    img: "babylloween.webp",
    ajust: ``,
    alt: `Un bébé souriant habillé en petit épouvantail trop mignon, dans un décors de grange à paille avec des citrouilles d'Halloween.`,
@@ -31,7 +34,8 @@ let babylloween = {
 
 let etienne = {
    id: "ça tu le laisse, c'est le code qui le gère",
-   img: "micro-et-jazz.webp",
+   nomProjet: "etienne",
+   img: "etienne.webp",
    ajust: ``,
    alt: `Photo gros plan sur un micro rétro, l'arrière plan est flouté et montre un homme jouant du saxophone.`,
    figcaption: `Etienne`,
@@ -68,7 +72,7 @@ function addWorks(listeProjets) {
 
       aImg.href = projet.a;
       aImg.target= "_blank";
-      img.src = `assets/images/${projet.img}`;
+      img.src = `assets/images/works/${projet.nomProjet}/${projet.img}`;
       img.alt = projet.alt;
       img.style = `object-position: ${projet.ajust}`;
       figcaption.textContent = projet.figcaption;

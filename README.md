@@ -24,8 +24,9 @@ correctifs à voir avec Flo:
 
 Messages pour Flo:
 modèle à copier/coller pour ajouter un projet:
-let nomProjet = {
+let nouveauProjet = {
    id: "ça tu le laisse, c'est le code qui le gère",
+   nomProjet: "le nom que tu veux donner à ton projet",
    img: "nom du fichier photo, sans oublier l'extention de fichier",
    ajust: `ajuste le positionnment de l'image dans le cadre.`,
    alt: `un message pour aider les mal-voyants à savoir ce que représente la photo`,
@@ -37,7 +38,8 @@ let nomProjet = {
 Pour ajouter un nouveau projet à la liste des publications:
    1: copier le norceau de code et le coller dans la partie "tous les projets".
    2: modifier le norceau de code que tu as collé pour personaliser les champs. 
-      2.a: remplacer nomProjet par le nom que tu veux donner à ce projet. ex: witchyWeen ou coupleHalloween.
+      2.a: remplacer "nouveauProjet" par le nom que tu veux donner à ce projet. ex: witchyWeen ou coupleHalloween.
+         Ca doit être le même nom que celui que tu donnera au champ "nomProjet" et au dossier qui contiandra les photos du projet.
          restrictions de nom:
             - un seul mot tout attaché.
             - le nom commence par une minuscule.
@@ -46,6 +48,12 @@ Pour ajouter un nouveau projet à la liste des publications:
    3: ajouter le nom du projet à "liste des projets affichés" à l'emplacement où tu veux.
       L'affichage des projets se fait dans l'ordre de la liste.
    4: mettre à jour le fichier coté hébergeur.
+
+Pour ajouter des photos au projets:
+   Pour un nouveau projet, tu crée un nouveau dossier dans assets/images que tu nomme de la même façon que dans le morceau de code à copier/coller.
+   Tu ajoute la photo que tu veux dans le dossier assets/images/works/nomDuProjet.
+   Attention à bien définir le nom des projets et des photos pour qu'ils soient courts et compréhensibles.
+   Les noms commencent par une minuscule et ne comportent pas de caractères spéciaux (exerption pour les photos si tu veux mettre un -).
 
 Pour ajuster la photo par rapport au cadre avec "ajust":
    Si tu laisse le champ vide, la photo sera automatiquement centrée sur sa largeur et sur sa hauteur.
