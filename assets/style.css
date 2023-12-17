@@ -210,8 +210,6 @@ main .mainTopText ul li a {
 .works ul li article figure figcaption {
   margin-top: min(30px, 5vw);
   font-size: clamp(1.75rem, 3.5vw, 3rem);
-}
-.works ul li article figure figcaption a {
   font-family: "Headland One", serif;
 }
 .works ul li article p {
@@ -220,7 +218,7 @@ main .mainTopText ul li a {
   font-weight: 300;
 }
 .works ul li article a {
-  font-weight: 400;
+  font-weight: 500;
 }
 .works .worksBottom {
   margin-top: 12vw;
@@ -327,6 +325,6 @@ footer .contact {
   margin-top: 80px;
 }
 footer .contact a {
-  color: blue;
+  color: #232dba;
   text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
