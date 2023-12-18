@@ -17,7 +17,7 @@ let coupleHalloween = {
    ajust: `50% 90%`,
    alt: `Photo de deux personnes en salopette et chemise à carreaux avec des têtes en forme de citrouilles d'Halloween, dans une forêt automnale.`,
    figcaption: `Couple Halloween !`,
-   p: `Aaaahh cette séance totalement spontané figure par une de mes préférés de ces temps ci ! C’était fun, c’était spooky, c’était mignon, bref, j’ai adorée !! L’année prochaine j’espère vous voir bien plus nombreux à sauter le pas pour faire ce type de séance !! Vous allez pas être déçu du résultat je vous le… `,
+   p: `Aaaahh cette séance totalement spontané figure par une de mes préférés de ces temps ci ! C’était fun, c’était spooky, c’était mignon, bref, j’ai adorée !! L’année prochaine j’espère vous voir bien plus nombreux à sauter le pas pour faire ce type de séance !! Vous allez pas être déçu du résultat je vous le garante, il y a tellement de choses et styles différent a explorer ! J’ai déjà un couple qui a booké une séance de ce genre et j’ai vraiment très hâte ! Merci à Nathalie et Patrick de s’être prêté au jeu !`,
    a: `https://florencedemeusy.fr/2023/11/09/couple-halloween/`
 };
 
@@ -39,7 +39,7 @@ let etienne = {
    ajust: ``,
    alt: `Photo gros plan sur un micro rétro, l'arrière plan est flouté et montre un homme jouant du saxophone.`,
    figcaption: `Etienne`,
-   p: `Suite à de nombreux messages reçu après avoir postée les témoignages que j’ai obtenus, dont celui de Etienne, vous avez été pas mal de personnes à avoir été interpellé par ses photos que je n’ai jamais posté (d’ailleurs je me demande pourquoi je ne l’ai jamais fait).. Pour la petite histoire, j’ai découvert Etienne il… `,
+   p: `Suite à de nombreux messages reçu après avoir posté les témoignages que j’ai obtenus, dont celui de Etienne, vous avez été pas mal de personnes à avoir été interpellés par ses photos que je n’ai jamais postées (d’ailleurs je me demande pourquoi je ne l’ai jamais fait).. Pour la petite histoire, j’ai découvert Etienne il y à déjà de nombreuses années. Il jouait au pied du Palais des Papes en Avignon et je me rappelle avoir été fascinée par son talent, que je vous laisse découvrir avec cette video (aucune des videos ne sont de moi). Puis les années sont passé et j’ai pu recroiser sa route lors d’un mariage que j’ai couvert puis encore quelques années plus tard à mon ancien lieu de travail. De fil en aiguille nous avons pu organiser une séance photo pour ses cartes de voeux pour la nouvelle année et ce sont aujourd’hui ces dites photos que je souhaite partager avec vous et vous faire découvrir. D’ailleurs si jamais vous souhaitez vous marier ou avez besoins simplement d’un talentueux chanteur de Jazz pour un évènement, je vous recommande vivement de contacter Etienne. Non seulement il a un talent fou mais en plus il est vraiment très gentil et drôle.`,
    a: "https://florencedemeusy.fr/2023/07/14/etienne/"
 };
 
@@ -76,6 +76,7 @@ function addWorks(listeProjets) {
       img.alt = projet.alt;
       img.style = `object-position: ${projet.ajust}`;
       figcaption.textContent = projet.figcaption;
+      p.className = "articleStory";
       p.textContent = projet.p;
       aReadMore.href = projet.a;
       aReadMore.target= "_blank";
@@ -108,9 +109,24 @@ function addWorks(listeProjets) {
    });
 };
 
+// ajuste la hauteur du paragraphe en fonction de sa largeur. moins le paragraphe est long, plus il deviens haut pour contenir la même 
+function heightCalc() {
+   const paragraphs = document.querySelectorAll(".articleStory");
+   const maxWidthPx = 600;
+   const pHeightPx = 145;
+
+   paragraphs.forEach((p) => {
+     const pWidth = p.getBoundingClientRect().width;
+     const coefficient = maxWidthPx / pWidth;
+     p.style.height = `${pHeightPx * coefficient}px`;
+   });
+ };
+
 function main() {
-   idDefiner(listeProjets)
-   addWorks(listeProjets)
+   idDefiner(listeProjets);
+   addWorks(listeProjets);
+   window.addEventListener('resize', heightCalc);
+   heightCalc();
 };
 
 main();

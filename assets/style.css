@@ -217,6 +217,11 @@ main .mainTopText ul li a {
   font-size: 1.25em;
   font-weight: 300;
 }
+.works ul li article .articleStory {
+  height: 145px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .works ul li article a {
   font-weight: 500;
 }

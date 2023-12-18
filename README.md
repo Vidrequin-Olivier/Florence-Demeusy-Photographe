@@ -1,14 +1,10 @@
 # Florence-Demeusy-Photographe
 travail à faire:
-   - définir un nombre de caratères max pour la boite .works article p et faire que, si le texte dépasse, il est tronqué et ça affiche 3 points de suspension.
-      une fois que c'est fait, copier l'intégralité du contenus des paragraphes (pour Couple Halloween et pour Etienne) depuis leur lien et remplacer le contenus actuel de leurs p.
+   dans .articleStory, les 3 points de suspensions n'apparaissent pas quand le texte déborde du paragraphe, et selon la hauteur du paragraphe, la dernière ligne est coupée verticalement...
 
 correctifs à voir avec Flo:
-   remplacer l'image dans head link rel="icon"
    tous les liens qui renvoient vers une autre page s'ouvrent dans un nouvel onglet. c'est ok ?
    il faudrait choisir une autre molice d'écriture pour $secondPolice
-   .mainTop ul
-      proposer de rassembler le contenus de tous les liens sur une seule page avec une nav-bar
    .publiLireTout
       les 2 liens renvoient à la même adresse
    dans .works
@@ -47,7 +43,8 @@ Pour ajouter un nouveau projet à la liste des publications:
       2.b: remplacer le contenus des champs en gardant les guillemets.
    3: ajouter le nom du projet à "liste des projets affichés" à l'emplacement où tu veux.
       L'affichage des projets se fait dans l'ordre de la liste.
-   4: mettre à jour le fichier coté hébergeur.
+   4: tester le rendu en local.
+   5: mettre à jour le fichier coté hébergeur.
 
 Pour ajouter des photos au projets:
    Pour un nouveau projet, tu crée un nouveau dossier dans assets/images que tu nomme de la même façon que dans le morceau de code à copier/coller.
